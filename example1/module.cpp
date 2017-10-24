@@ -36,3 +36,8 @@ static PyModuleDef superfastcode_module = {
     0,
     superfastcode_methods // Structure that defines the methods.
 };
+
+PyMODINIT_FUNC PyInit_superfastcode()
+{
+    return PyModule_Create(&superfastcode_module);
+}
