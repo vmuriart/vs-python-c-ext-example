@@ -20,3 +20,11 @@ PyObject* tanh_impl(PyObject*, PyObject* o)
     double tanh_x = sinh_impl(x) / cosh_impl(x);
     return PyFloat_FromDouble(tanh_x);
 }
+
+static PyMethodDef superfastcode_methods[] = {
+    // The first property is the name exposed to python, the second is the C++ function name.
+    {"fast_tanh", (PyCFunction)tanh_impl, METH_O, nullptr},
+
+    // Terminate the array with an object containing nulls.
+    {nullptr, nullptr, 0, nullptr}
+};
