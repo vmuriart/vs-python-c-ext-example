@@ -28,3 +28,11 @@ static PyMethodDef superfastcode_methods[] = {
     // Terminate the array with an object containing nulls.
     {nullptr, nullptr, 0, nullptr}
 };
+
+static PyModuleDef superfastcode_module = {
+    PyModuleDef_HEAD_INIT,
+    "superfastcode", // Module name.
+    "Provides some functions, but faster", // Module description.
+    0,
+    superfastcode_methods // Structure that defines the methods.
+};
