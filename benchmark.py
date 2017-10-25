@@ -2,6 +2,8 @@ from itertools import islice
 from random import random
 from time import perf_counter
 
+from ExampleCLibrary import fast_tanh
+
 COUNT = 500000  # Change this value depending on the speed of your computer
 DATA = list(islice(iter(lambda: (random() - 0.5) * 3.0, None), COUNT))
 
@@ -46,3 +48,4 @@ if __name__ == "__main__":
     test(sequence_tanh, 'sequence_tanh')
 
     test(lambda d: [tanh(x) for x in d], '[tanh(x) for x in d]')
+    test(lambda d: [fast_tanh(x) for x in d], '[fast_tanh(x) for x in d]')
