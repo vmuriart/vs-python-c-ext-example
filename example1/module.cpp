@@ -1,4 +1,4 @@
-﻿#include <Windows.h>
+﻿// Example C extension module
 #include <cmath>
 #include <Python.h>
 

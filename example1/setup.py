@@ -1,4 +1,4 @@
-from distutils.core import setup, Extension, DEBUG
+from distutils.core import setup, Extension
 
 sfc_module = Extension('ExampleCLibrary', sources=['module.cpp'])
 
